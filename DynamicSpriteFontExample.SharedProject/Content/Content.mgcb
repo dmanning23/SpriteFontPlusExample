@@ -1,0 +1,31 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:Android
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:SpriteFontPlus.Content.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin DroidSans.ttf
+/importer:XmlSourceImporter
+/processor:BinaryFontDocumentProcessor
+/build:DroidSans.ttf
+
+#begin DroidSansJapanese.ttf
+/importer:XmlSourceImporter
+/processor:BinaryFontDocumentProcessor
+/build:DroidSansJapanese.ttf
+
+#begin Symbola-Emoji.ttf
+/importer:XmlSourceImporter
+/processor:BinaryFontDocumentProcessor
+/build:Symbola-Emoji.ttf
+

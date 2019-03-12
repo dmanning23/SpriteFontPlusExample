@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicSpriteFontExample.WindowsDX", "DynamicSpriteFontExample.WindowsDX\DynamicSpriteFontExample.WindowsDX.csproj", "{1B2E4E50-9220-4D29-B768-6C2C4B6561DB}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DynamicSpriteFontExample.SharedProject", "DynamicSpriteFontExample.SharedProject\DynamicSpriteFontExample.SharedProject.shproj", "{FE13C87F-7A2F-47AE-BCF9-2B80B67822B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicSpriteFontExample.Android", "DynamicSpriteFontExample.Android\DynamicSpriteFontExample.Android.csproj", "{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DynamicSpriteFontExample.SharedProject\DynamicSpriteFontExample.SharedProject.projitems*{1b2e4e50-9220-4d29-b768-6c2c4b6561db}*SharedItemsImports = 4
+		DynamicSpriteFontExample.SharedProject\DynamicSpriteFontExample.SharedProject.projitems*{bbefdfe1-9a80-4619-b93b-8ef810ccbf79}*SharedItemsImports = 4
+		DynamicSpriteFontExample.SharedProject\DynamicSpriteFontExample.SharedProject.projitems*{fe13c87f-7a2f-47ae-bcf9-2b80b67822b9}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B2E4E50-9220-4D29-B768-6C2C4B6561DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2E4E50-9220-4D29-B768-6C2C4B6561DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2E4E50-9220-4D29-B768-6C2C4B6561DB}.Debug|x86.ActiveCfg = Debug|x86
+		{1B2E4E50-9220-4D29-B768-6C2C4B6561DB}.Debug|x86.Build.0 = Debug|x86
+		{1B2E4E50-9220-4D29-B768-6C2C4B6561DB}.Release|Any CPU.ActiveCfg = Release|x86
+		{1B2E4E50-9220-4D29-B768-6C2C4B6561DB}.Release|x86.ActiveCfg = Release|x86
+		{1B2E4E50-9220-4D29-B768-6C2C4B6561DB}.Release|x86.Build.0 = Release|x86
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Debug|x86.Build.0 = Debug|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Release|x86.ActiveCfg = Release|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Release|x86.Build.0 = Release|Any CPU
+		{BBEFDFE1-9A80-4619-B93B-8EF810CCBF79}.Release|x86.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35ACDF4E-2CE2-46B1-A19F-35DC131069A1}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Myra.UIEditor\Myra.UIEditor.csproj
+	EndGlobalSection
+EndGlobal
