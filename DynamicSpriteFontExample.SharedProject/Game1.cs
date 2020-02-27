@@ -43,9 +43,13 @@ namespace DynamicSpriteFontExample
 			_spriteBatch = new SpriteBatch(GraphicsDevice);
 
 			// TODO: use this.Content to load your game content here
-			_font = DynamicSpriteFont.FromTtf(Content.Load<byte[]>(@"DroidSans"), 20);
-			_fontIdJapanese = _font.AddTtf("Japanese", Content.Load<byte[]>(@"DroidSansJapanese"));
-			_fontIdEmojis = _font.AddTtf("Emojis", Content.Load<byte[]>(@"Symbola-Emoji"));
+			_font = DynamicSpriteFont.FromTtf(Content.Load<byte[]>(@"LuckiestGuy-Regular"), 72, 512, 512);
+			_fontIdJapanese = _font.AddTtf("Japanese", Content.Load<byte[]>(@"LuckiestGuy-Regular"));
+			_fontIdEmojis = _font.AddTtf("Emojis", Content.Load<byte[]>(@"LuckiestGuy-Regular"));
+
+			//_font = DynamicSpriteFont.FromTtf(Content.Load<byte[]>(@"DroidSans"), 72);
+			//_fontIdJapanese = _font.AddTtf("Japanese", Content.Load<byte[]>(@"DroidSansJapanese"));
+			//_fontIdEmojis = _font.AddTtf("Emojis", Content.Load<byte[]>(@"Symbola-Emoji"));
 
 			_white = new Texture2D(GraphicsDevice, 1, 1);
 			_white.SetData(new[] { Color.White });
@@ -69,7 +73,7 @@ namespace DynamicSpriteFontExample
 			_wasSpaceDown = isSpaceDown;
 		}
 
-		private void DrawString(string text, int y)
+		private void DrawString(string text, int y, Color color, float scale = 1f)
 		{
 			if (_drawBackground)
 			{
@@ -77,7 +81,7 @@ namespace DynamicSpriteFontExample
 				_spriteBatch.Draw(_white, new Rectangle(0, y, (int)size.X, (int)size.Y), Color.Green);
 			}
 
-			_spriteBatch.DrawString(_font, text, new Vector2(0, y), Color.White);
+			_spriteBatch.DrawString(_font, text, new Vector2(0, y), color, new Vector2(scale));
 		}
 
 		/// <summary>
@@ -93,35 +97,44 @@ namespace DynamicSpriteFontExample
 
 			_font.FontId = _font.DefaultFontId;
 			// Render some text
-			_font.Size = 18;
-			DrawString("The quick brown fox jumps over the lazy dog", 0);
-
-			_font.Size = 20;
-			DrawString("Üben quält finſteren Jagdſchloß höfliche Bäcker größeren, N: Blåbærsyltetøy", 30);
-
-			_font.Size = 22;
-			DrawString("Høj bly gom vandt fræk sexquiz på wc, S: bäckasiner söka", 60);
-
+			//_font.Size = 18;
+			//DrawString("The quick brown fox jumps over the lazy dog", 0);
 			_font.Size = 24;
-			DrawString("Sævör grét áðan því úlpan var ónýt, P: Pchnąć w tę łódź jeża lub osiem skrzyń fig", 90);
+			DrawString("Loading...", 0, Color.White);
 
-			_font.Size = 26;
-			DrawString("Příliš žluťoučký kůň úpěl ďábelské kódy, R: В чащах юга жил-был цитрус? Да, но фальшивый экземпляр! ёъ.", 120);
+			DrawString("Loading...", 0, Color.Red);
 
-			_font.Size = 28;
-			DrawString("kilómetros y frío, añoraba, P: vôo à noite, F: Les naïfs ægithales hâtifs pondant à Noël où", 150);
+
+			//_font.Size = 64;
+
+			DrawString("The quick brown fox jumps over the lazy dog", 64, Color.White, 2f);
+
+			//_font.Size = 20;
+			DrawString("Üben quält finſteren Jagdſchloß höfliche Bäcker größeren, N: Blåbærsyltetøy", 30, Color.White, 3f);
+
+			//_font.Size = 22;
+			DrawString("Høj bly gom vandt fræk sexquiz på wc, S: bäckasiner söka", 60, Color.White);
+
+			//_font.Size = 24;
+			DrawString("Sævör grét áðan því úlpan var ónýt, P: Pchnąć w tę łódź jeża lub osiem skrzyń fig", 90, Color.White);
+
+			//_font.Size = 26;
+			DrawString("Příliš žluťoučký kůň úpěl ďábelské kódy, R: В чащах юга жил-был цитрус? Да, но фальшивый экземпляр! ёъ.", 120, Color.White);
+
+			//_font.Size = 28;
+			DrawString("kilómetros y frío, añoraba, P: vôo à noite, F: Les naïfs ægithales hâtifs pondant à Noël où", 150, Color.White);
 
 			_font.FontId = _fontIdJapanese;
-			_font.Size = 30;
-			DrawString("いろはにほへど", 180);
+			//_font.Size = 30;
+			DrawString("いろはにほへど", 180, Color.White);
 
 			_font.FontId = _fontIdEmojis;
-			_font.Size = 32;
-			DrawString("🙌📦👏🔥👍😻😂🎉💻😍🚀😁🙈🇧🇪👩😉🍻🎶🏆👀👉👶💕😎😱🌌🌻🍺🏀👇👯💁💝💩😃😅🙏🚄🇫🌧🌾🍀🍁🍓🍕🎾🏈", 220);
+			//_font.Size = 32;
+			DrawString("🙌📦👏🔥👍😻😂🎉💻😍🚀😁🙈🇧🇪👩😉🍻🎶🏆👀👉👶💕😎😱🌌🌻🍺🏀👇👯💁💝💩😃😅🙏🚄🇫🌧🌾🍀🍁🍓🍕🎾🏈", 220, Color.White);
 
 			_font.FontId = _font.DefaultFontId;
-			_font.Size = 26;
-			DrawString("Texture:", 300);
+			//_font.Size = 26;
+			DrawString("Texture:", 300, Color.White);
 
 			_spriteBatch.Draw(_font.Texture, new Vector2(0, 330), Color.White);
 

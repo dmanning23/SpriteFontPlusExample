@@ -24,6 +24,11 @@
 /processor:BinaryFontDocumentProcessor
 /build:DroidSansJapanese.ttf
 
+#begin LuckiestGuy-Regular.ttf
+/importer:XmlSourceImporter
+/processor:BinaryFontDocumentProcessor
+/build:LuckiestGuy-Regular.ttf
+
 #begin Symbola-Emoji.ttf
 /importer:XmlSourceImporter
 /processor:BinaryFontDocumentProcessor
