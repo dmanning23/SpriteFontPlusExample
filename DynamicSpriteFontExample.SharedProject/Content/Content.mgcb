@@ -15,22 +15,32 @@
 #---------------------------------- Content ---------------------------------#
 
 #begin DroidSans.ttf
-/importer:XmlSourceImporter
+/importer:BinaryFontSourceImporter
 /processor:BinaryFontDocumentProcessor
 /build:DroidSans.ttf
 
 #begin DroidSansJapanese.ttf
-/importer:XmlSourceImporter
+/importer:BinaryFontSourceImporter
 /processor:BinaryFontDocumentProcessor
 /build:DroidSansJapanese.ttf
 
 #begin LuckiestGuy-Regular.ttf
-/importer:XmlSourceImporter
+/importer:BinaryFontSourceImporter
 /processor:BinaryFontDocumentProcessor
 /build:LuckiestGuy-Regular.ttf
 
+#begin NanumGothic-Regular.ttf
+/importer:BinaryFontSourceImporter
+/processor:BinaryFontDocumentProcessor
+/build:NanumGothic-Regular.ttf
+
+#begin Roboto-Regular.ttf
+/importer:BinaryFontSourceImporter
+/processor:BinaryFontDocumentProcessor
+/build:Roboto-Regular.ttf
+
 #begin Symbola-Emoji.ttf
-/importer:XmlSourceImporter
+/importer:BinaryFontSourceImporter
 /processor:BinaryFontDocumentProcessor
 /build:Symbola-Emoji.ttf
 

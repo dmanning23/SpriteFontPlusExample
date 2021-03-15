@@ -19,7 +19,7 @@
     <AndroidSupportedAbis>armeabi-v7a%3bx86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions>.m4a</AndroidStoreUncompressedFileExtensions>
     <MandroidI18n />
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <MonoGamePlatform>Android</MonoGamePlatform>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
@@ -50,18 +50,34 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Cyotek.Drawing.BitmapFont, Version=1.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cyotek.Drawing.BitmapFont.2.0.1\lib\netstandard2.1\Cyotek.Drawing.BitmapFont.dll</HintPath>
+    </Reference>
+    <Reference Include="FontBuddyLib.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontBuddy.2.0.19\lib\MonoAndroid10\FontBuddyLib.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="FontStashSharp.MonoGame, Version=0.9.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontStashSharp.MonoGame.0.9.2\lib\netstandard2.0\FontStashSharp.MonoGame.dll</HintPath>
+    </Reference>
+    <Reference Include="GameTimer.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GameTimer.2.2.0\lib\MonoAndroid10\GameTimer.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.Android.3.7.1.189\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="OpenTK-1.0" />
-    <Reference Include="SpriteFontPlus, Version=0.6.3.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpriteFontPlus.MonoGame.0.6.3.15\lib\netstandard2.0\SpriteFontPlus.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="StbImageSharp, Version=2.22.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StbImageSharp.2.22.5\lib\netstandard2.0\StbImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="StbTrueTypeSharp, Version=1.24.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StbTrueTypeSharp.1.24.7\lib\netstandard2.0\StbTrueTypeSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -102,7 +118,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\MonoGame.Framework.Android.3.7.1.189\build\MonoGame.Framework.Android.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Framework.Android.3.7.1.189\build\MonoGame.Framework.Android.targets'))" />
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
   </Target>
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
